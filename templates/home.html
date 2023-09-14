@@ -4,45 +4,45 @@
     <title>
       jovians careers
     </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <style>
-      h1{
-        font-size: 40px;
-        font-family: Roboto;
-        color: RGB(100,100,100);
-        text-align: center;
-        
-      }
-      #banner{
-        height : 360 px;
-        object-fit: cover;  
-      }
-      h2{
-        font-family: Roboto;
-        font-size: 30px;
-        text-align: center;
-        color: RGB(100, 100, 100);
-      }
-      #di{
-        max-width: 700px;
-        margin: 0 auto 0 auto;
+      .img-fluid{
+        width:100%;
+        height : 400px;
       }
     </style>
     
+    
+    
   </head>
   <body>
-    <div id="di">
-      <h1>
-      Jovian Careers
+    <div class="container">
+      <h1 class="text-center">
+      {{company_name}} Careers
     </h1>
-    <img src="https://joviancareers-1--hemanthroyal222.repl.co/static/banner.jpg" height=320px width=100% id="banner" >
-    <h2>About Jovian</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et pharetra pharetra massa massa ultricies mi quis. Purus in mollis nunc sed id. Nunc consequat interdum varius sit amet mattis. Eget lorem dolor sed viverra ipsum. Quis varius quam quisque id. Mauris vitae ultricies leo integer malesuada nunc vel risus. Suscipit tellus mauris a diam maecenas. Id leo in vitae turpis massa sed elementum tempus egestas. Curabitur vitae nunc sed velit dignissim sodales.
+    <img src="https://joviancareers-1--hemanthroyal222.repl.co/static/banner.jpg" height=320px width=100% class="img-fluid">
+    <h2 class="text-center">About Jovian</h2>
+    <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et pharetra pharetra massa massa ultricies mi quis. Purus in mollis nunc sed id. Nunc consequat interdum varius sit amet mattis. Eget lorem dolor sed viverra ipsum. Quis varius quam quisque id. Mauris vitae ultricies leo integer malesuada nunc vel risus. Suscipit tellus mauris a diam maecenas. Id leo in vitae turpis massa sed elementum tempus egestas. Curabitur vitae nunc sed velit dignissim sodales.
+</p>
+    <h2 class="text-center">Open Positions</h2>
+    <div >
+      {% for job in jobs %}
 
-Imperdiet massa tincidunt nunc pulvinar sapien et. Varius morbi enim nunc faucibus a pellentesque. Tristique nulla aliquet enim tortor. Ornare aenean euismod elementum nisi quis eleifend. Neque viverra justo nec ultrices dui sapien eget. Nec feugiat nisl pretium fusce id velit. Faucibus in ornare quam viverra orci sagittis eu. In ornare quam viverra orci. A scelerisque purus semper eget duis at tellus at. Turpis tincidunt id aliquet risus feugiat. Netus et malesuada fames ac turpis. Cras sed felis eget velit aliquet sagittis id. At varius vel pharetra vel turpis nunc eget. Interdum velit laoreet id donec ultrices tincidunt arcu non sodales. Turpis egestas sed tempus urna et pharetra pharetra massa massa. Sed viverra tellus in hac habitasse. Sagittis aliquam malesuada bibendum arcu vitae elementum. Morbi tempus iaculis urna id volutpat lacus.</p>
-    <h2>Open Positions</h2>
-    <p>pending this part</p>
-    <button>Contact Us</button>
+      {% include 'jobitem.html' %}
+
+     
     
+      {% endfor %}
+
+      
+
+      
+    </div>
+      <div class="text-center">
+        <button class="btn btn-primary text-center mt-4">Contact Us</button>
+      </div>
     </div>
     
   </body>
